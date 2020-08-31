@@ -1,0 +1,46 @@
+[package]
+name = "play"
+version = "0.1.0"
+authors = ["Nicholas Young <nicholas@nicholaswyoung.com>"]
+edition = "2018"
+description = "Ultralight, experimental, media server."
+license = "SEE LICENSE in LICENSE"
+
+[dependencies]
+log = "0.4.11"
+pretty_env_logger = "0.4.0"
+warp = "0.2.4"
+async-graphql = "1.17.10"
+async-graphql-warp = "1.17.3"
+structopt = "0.3.16"
+toml = "0.5.6"
+thiserror = "1.0.20"
+serde = { version = "1.0.115", features = ["derive"] }
+
+[dependencies.tokio]
+version = "0.2.22"
+features = [
+  "rt-threaded",
+  "fs",
+]
+
+[dependencies.sqlx]
+version = "0.4.0-beta.1"
+default-features = false
+features = [
+  "runtime-tokio",
+  "macros",
+]
+
+[features]
+default = [
+  "sqlite",
+]
+
+sqlite = [
+  "sqlx/sqlite",
+]
+
+[[bin]]
+name = "play"
+path = "src/main.rs"
