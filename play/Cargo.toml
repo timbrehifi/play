@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = ["Nicholas Young <nicholas@nicholaswyoung.com>"]
 edition = "2018"
 description = "Ultralight, experimental, media server."
+publish = false
 license = "SEE LICENSE in LICENSE"
 
 [dependencies]
