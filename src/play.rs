@@ -10,6 +10,7 @@ use std::path::Path;
 /// An instance of the Play server, which contains all necessary
 /// runtime configuration and can be updated with an optional
 /// configuration file loaded from disk.
+#[derive(Default)]
 pub struct Play {
     config: Config,
 }
@@ -18,9 +19,7 @@ impl Play {
     /// Create a new instance of the Play service with default
     /// configuration.
     pub fn new() -> Self {
-        Play {
-            config: Config::new(),
-        }
+        Play::default()
     }
 
     /// Populate configuration from current environment variables.

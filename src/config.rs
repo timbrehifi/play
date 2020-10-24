@@ -17,11 +17,6 @@ pub struct Config {
 }
 
 impl Config {
-    /// Create a new instance of `Config` with default options.
-    pub fn new() -> Self {
-        Self::default()
-    }
-
     /// Create an instance of `Config` from available environment
     /// variables.
     pub fn from_env() -> Result<Self> {
@@ -71,7 +66,7 @@ mod tests {
 
     #[test]
     fn it_allows_overriding_defaults() {
-        let _opts = Config::new();
+        let _opts = Config::default();
     }
 
     #[tokio::test]
