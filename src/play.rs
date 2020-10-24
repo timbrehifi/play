@@ -22,7 +22,7 @@ impl Play {
             config: Config::new(),
         }
     }
-    
+
     /// Populate configuration from current environment variables.
     pub fn load_env(&mut self) -> Result<()> {
         self.config = Config::from_env()?;
@@ -30,10 +30,7 @@ impl Play {
     }
 
     /// Populate configuration from a path to file on disk.
-    pub async fn load_config<P>(
-        &mut self,
-        path: P,
-    ) -> Result<()>
+    pub async fn load_config<P>(&mut self, path: P) -> Result<()>
     where
         P: AsRef<Path>,
     {

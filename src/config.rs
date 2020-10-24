@@ -6,11 +6,7 @@
 
 use crate::result::{Error, Result};
 use serde::Deserialize;
-use std::{
-    env,
-    path::Path,
-    str,
-};
+use std::{env, path::Path, str};
 use tokio::{fs, io::AsyncReadExt};
 
 /// Options necessary to start and operate an instance of Play.
