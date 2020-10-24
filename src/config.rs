@@ -40,7 +40,7 @@ impl Config {
             .map_err(|_| Error::BadEncoding)?;
 
         let res = toml::from_str(str::from_utf8(&contents[..]).map_err(|_| Error::BadEncoding)?)
-            .map_err(|e| Error::Toml(e))?;
+            .map_err(Error::Toml)?;
 
         Ok(res)
     }
