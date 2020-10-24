@@ -1,0 +1,8 @@
+[package]
+name = "storage"
+version = "0.1.0"
+authors = ["Nicholas Young <hi@secretfader.com>"]
+edition = "2018"
+publish = false
+
+[dependencies]
