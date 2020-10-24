@@ -3,6 +3,7 @@
 ![Continuous Integration](https://github.com/timbrehifi/play/workflows/Continuous%20Integration/badge.svg)
 ![Security Audit](https://github.com/timbrehifi/play/workflows/Security%20Audit/badge.svg)
 [![License](https://img.shields.io/badge/License-MPL%202.0-blue)](https://www.mozilla.org/en-US/MPL/2.0)
+=======
 [![Made by Fader](https://img.shields.io/badge/made_by-Fader-purple.svg)](https://www.secretfader.com)
 
 An experiment in replacing Plex. Play is an ultralight media server, built by and for media enthusiasts. Made with passion and coffee in Colorado, USA.
