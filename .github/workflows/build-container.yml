@@ -1,0 +1,20 @@
+name: Build and Publish Container Image
+
+on:
+  release:
+    types: [ published ]
+  pull_request:
+
+jobs:
+  build-container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish to GitHub
+        uses: docker/build-push-action@v2.0.1
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          name: timbrehifi/play/play
+          registry: docker.pkg.github.com
+          tag_with_ref: true
